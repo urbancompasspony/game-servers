@@ -15,6 +15,11 @@ First OP? Set with RCON!
 /whitelist on
 /whitelist off
 
+/gamemode survival ZoioTheGreenEye
+/gamemode creative ZoioTheGreenEye
+/gamemode adventure ZoioTheGreenEye
+/gamemode spectator ZoioTheGreenEye
+
 /deop NomeJogador
 
 /ban NomeJogador motivo
