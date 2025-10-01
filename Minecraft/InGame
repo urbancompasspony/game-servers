@@ -1,11 +1,13 @@
-# SET OP AND LEVEL VIA RCON:
+# LEVEL IS INGAME ONLY:
 
 Nível 1: Bypass spawn protection
 Nível 2: /clear, /give, /tp, etc
 Nível 3: /ban, /kick, /op
 Nível 4: /stop (parar servidor)
 
-First OP with RCON!
+/op NomeJogador lvl
+
+First OP? Set with RCON!
 
 /whitelist add NomeJogador
 /whitelist remove NomeJogador
@@ -13,7 +15,6 @@ First OP with RCON!
 /whitelist on
 /whitelist off
 
-/op NomeJogador lvl
 /deop NomeJogador
 
 /ban NomeJogador motivo
