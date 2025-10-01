@@ -1,0 +1,33 @@
+# SET OP AND LEVEL VIA RCON:
+
+Nível 1: Bypass spawn protection
+Nível 2: /clear, /give, /tp, etc
+Nível 3: /ban, /kick, /op
+Nível 4: /stop (parar servidor)
+
+First OP with RCON!
+
+/whitelist add NomeJogador
+/whitelist remove NomeJogador
+/whitelist list
+/whitelist on
+/whitelist off
+
+/op NomeJogador
+/deop NomeJogador
+
+/ban NomeJogador motivo
+/pardon NomeJogador
+
+/kick NomeJogador motivo
+
+/gamemode survival @a
+/gamemode creative NomeJogador
+
+/tp NomeJogador 100 64 200
+/give NomeJogador diamond 64
+
+/time set day
+/weather clear
+
+/say Mensagem para todos
