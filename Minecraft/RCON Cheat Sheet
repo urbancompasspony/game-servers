@@ -1,4 +1,9 @@
-# WhiteList
+########################################################################################
+🔐 Whitelist
+
+ATENÇÃO:
+- CONECTAR EXTERNAMENTE PELO LINK!!!
+- SENAO A UUID QUEBRA E O USUARIO NAO LOGA.
 
 # Ativar/desativar whitelist
 docker exec -it minecraft-server rcon-cli whitelist on
@@ -13,3 +18,126 @@ docker exec -it minecraft-server rcon-cli whitelist list
 
 # Recarregar whitelist
 docker exec -it minecraft-server rcon-cli whitelist reload
+
+########################################################################################
+👤 Gerenciamento de Jogadores
+
+# Listar jogadores online
+docker exec -it minecraft-server rcon-cli list
+
+# Kickar jogador
+docker exec -it minecraft-server rcon-cli kick NomeJogador "Motivo aqui"
+
+# Banir/desbanir jogador
+docker exec -it minecraft-server rcon-cli ban NomeJogador "Motivo"
+docker exec -it minecraft-server rcon-cli pardon NomeJogador
+
+# Banir/desbanir IP
+docker exec -it minecraft-server rcon-cli ban-ip 192.168.1.100
+docker exec -it minecraft-server rcon-cli pardon-ip 192.168.1.100
+
+# Listar banidos
+docker exec -it minecraft-server rcon-cli banlist players
+docker exec -it minecraft-server rcon-cli banlist ips
+
+########################################################################################
+👑 Operadores (Admin)
+
+# Dar OP (admin)
+docker exec -it minecraft-server rcon-cli op NomeJogador
+
+# Remover OP
+docker exec -it minecraft-server rcon-cli deop NomeJogador
+
+########################################################################################
+⚙️ Configurações do Servidor
+
+# Mudar dificuldade
+docker exec -it minecraft-server rcon-cli difficulty peaceful
+docker exec -it minecraft-server rcon-cli difficulty easy
+docker exec -it minecraft-server rcon-cli difficulty normal
+docker exec -it minecraft-server rcon-cli difficulty hard
+
+# Mudar gamemode de jogador
+docker exec -it minecraft-server rcon-cli gamemode survival NomeJogador
+docker exec -it minecraft-server rcon-cli gamemode creative NomeJogador
+docker exec -it minecraft-server rcon-cli gamemode adventure NomeJogador
+docker exec -it minecraft-server rcon-cli gamemode spectator NomeJogador
+
+# Gamemode padrão do servidor
+docker exec -it minecraft-server rcon-cli defaultgamemode survival
+
+# Mudar tempo
+docker exec -it minecraft-server rcon-cli time set day
+docker exec -it minecraft-server rcon-cli time set night
+docker exec -it minecraft-server rcon-cli time set 0
+
+# Mudar clima
+docker exec -it minecraft-server rcon-cli weather clear
+docker exec -it minecraft-server rcon-cli weather rain
+docker exec -it minecraft-server rcon-cli weather thunder
+
+# Setar spawn
+docker exec -it minecraft-server rcon-cli setworldspawn
+docker exec -it minecraft-server rcon-cli setworldspawn 100 64 200
+
+########################################################################################
+💬 Comunicação
+
+# Enviar mensagem para todos
+docker exec -it minecraft-server rcon-cli say "Servidor reiniciará em 5 minutos!"
+
+# Mensagem para jogador específico
+docker exec -it minecraft-server rcon-cli tell NomeJogador "Mensagem privada"
+
+# Título na tela
+docker exec -it minecraft-server rcon-cli title @a title "Bem-vindo!"
+docker exec -it minecraft-server rcon-cli title @a subtitle "Divirta-se!"
+
+########################################################################################
+🎮 Teleporte e Itens
+
+# Teleportar jogador
+docker exec -it minecraft-server rcon-cli tp NomeJogador 100 64 200
+docker exec -it minecraft-server rcon-cli tp Jogador1 Jogador2
+
+# Dar item
+docker exec -it minecraft-server rcon-cli give NomeJogador diamond 64
+docker exec -it minecraft-server rcon-cli give NomeJogador diamond_sword 1
+
+# XP
+docker exec -it minecraft-server rcon-cli xp add NomeJogador 100
+docker exec -it minecraft-server rcon-cli xp add NomeJogador 10 levels
+
+########################################################################################
+🔧 Administração
+
+# Salvar mundo
+docker exec -it minecraft-server rcon-cli save-all
+
+# Parar servidor (graceful shutdown)
+docker exec -it minecraft-server rcon-cli stop
+
+# Recarregar
+docker exec -it minecraft-server rcon-cli reload
+
+# Seed do mundo
+docker exec -it minecraft-server rcon-cli seed
+
+########################################################################################
+📊 Informações
+
+# Status do servidor
+docker exec -it minecraft-server rcon-cli list
+
+# Verificar versão
+docker exec -it minecraft-server rcon-cli version
+
+# Ajuda de comando
+docker exec -it minecraft-server rcon-cli help
+docker exec -it minecraft-server rcon-cli help comando
+
+########################################################################################
+Crie aliases:
+
+alias mc='docker exec -it minecraft-server rcon-cli'
