@@ -13,7 +13,7 @@ First OP with RCON!
 /whitelist on
 /whitelist off
 
-/op NomeJogador
+/op NomeJogador lvl
 /deop NomeJogador
 
 /ban NomeJogador motivo
